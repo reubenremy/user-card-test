@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Styled from 'styled-components';
+import Card from './Card'
 import { loadData } from '../utils/loadData';
 
 const List = Styled.ul`
@@ -29,7 +30,7 @@ class CardList extends Component {
             <List>
                 {users.map(user => (
                     <li key={user.login.uuid}>
-                        {user.name.first} {user.name.last}
+                        <Card user={ user }/>
                     </li>
                 ))}
             </List>
