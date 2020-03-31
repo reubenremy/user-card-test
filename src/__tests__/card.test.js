@@ -38,7 +38,9 @@ it('renders user data', async () => {
     })
 
     expect(container.querySelector("h2").textContent)
-    .toContain(fakeUser.name.first, fakeUser.name.last);
+    // .toContain(fakeUser.name.first, fakeUser.name.last); --This works to
+    //.toBe will work with string literals
+    .toBe(`${fakeUser.name.first} ${fakeUser.name.last}`)
 
     expect(container.textContent).toContain(fakeUser.email);
 
