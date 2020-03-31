@@ -25,7 +25,6 @@ class CardList extends Component {
 
     render() {
         const {users} = this.state;
-        console.log(users);
         return ( 
             <List>
                 {users.map(user => (
