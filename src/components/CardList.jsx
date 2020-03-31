@@ -24,10 +24,15 @@ class CardList extends Component {
     }
 
     render() {
+        const {users} = this.state;
+        console.log(users);
         return ( 
             <List>
-                <li>Foo</li>
-                <li>Bar</li>
+                {users.map(user => (
+                    <li key={user.login.uuid}>
+                        {user.name.first} {user.name.last}
+                    </li>
+                ))}
             </List>
         );
     }
